@@ -193,7 +193,7 @@ const ChatBox = () => {
                 <div className="desc-nav">
                   <button className='close-btn' onClick={toggleDesc}><FontAwesomeIcon icon="fa-solid fa-x" className='close-icon' /></button>
                 </div>
-                <img src={user.pic} id="profile-pic" alt={selectedChat.users.map((user1) => {if(user1._id !== user._id) return user1.pic})}></img>
+                <img src={selectedChat.users.map((user1) => {if(user1._id !== user._id) return user1.pic})} id="profile-pic" alt={selectedChat.users.map((user1) => {if(user1._id !== user._id) return user1.pic})}></img>
                 <div id='profile-desc'>
                   <div className='desc-div'>{selectedChat.users.map((user1) => {if(user1._id !== user._id) return user1.name})}</div>
                   <div className='desc-div'>{selectedChat.users.map((user1) => {if(user1._id !== user._id) return user1.email})}</div>
